@@ -178,7 +178,7 @@ BarcodeScanner.propTypes = {
 BarcodeScanner.defaultProps = {
   timeBeforeScanTest: 100,
   avgTimeByChar: 30,
-  minLength: 6,
+  minLength: 1,
   endChar: [9, 13],
   startChar: [],
   scanButtonLongPressThreshold: 3,
