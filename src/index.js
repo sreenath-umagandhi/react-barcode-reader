@@ -90,7 +90,7 @@ class BarcodeScanner extends React.Component {
       }
     }
 
-    if (onError) onError(this.stringWriting, errorMsg)
+   // if (onError) onError(this.stringWriting, errorMsg)
     this.initScannerDetection()
     return false
   }
