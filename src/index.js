@@ -73,14 +73,14 @@ class BarcodeScanner extends React.Component {
 
     // If all condition are good (length, time...), call the callback and re-initialize the plugin for next scanning
     // Else, just re-initialize
-    if (this.stringWriting.length >= minLength && this.lastCharTime - this.firstCharTime < this.stringWriting.length * avgTimeByChar) {
+    if (this.lastCharTime - this.firstCharTime < this.stringWriting.length * avgTimeByChar) {
       if (onScanButtonLongPressed && this.scanButtonCounter > scanButtonLongPressThreshold) onScanButtonLongPressed(this.stringWriting, this.scanButtonCounter)
       else if (onScan) onScan(this.stringWriting, this.scanButtonCounter)
 
       this.initScannerDetection()
       return true
     }
-
+/*
     let errorMsg = ''
     if (this.stringWriting.length < minLength) {
       errorMsg = `String length should be greater or equal ${minLength}`
@@ -88,7 +88,7 @@ class BarcodeScanner extends React.Component {
       if (this.lastCharTime - this.firstCharTime > this.stringWriting.length * avgTimeByChar) {
         errorMsg = `Average key character time should be less or equal ${avgTimeByChar}ms`
       }
-    }
+    }*/
 
    // if (onError) onError(this.stringWriting, errorMsg)
     this.initScannerDetection()
